@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            margin: 0; /* Remova as margens padrão do corpo */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f0f0f0; /* Adicione uma cor de fundo */
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .box {
+            font-size: 20px;
+            color: white;
+            min-height: 100vh; /* Ocupa toda a altura da tela */
+            width: 100vw; /* Ocupa toda a largura da tela */
+            border-radius: 0; /* Remova o arredondamento das bordas */
+            background: #191919;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .buttons-container {
+            display: flex;
+            justify-content: space-around;
+            height: 50px;
+            width: 150px;
+        }
+
+        button {
+            height: 30px;
+            width: 50px;
+            background: white;
+            border-radius: 5px;
+            color: blue;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <p> C*zinho hoje?</p>
+        <div class="buttons-container">
+            <button>
+                <a href="https://www.youtube.com/watch?v=nfWlot6h_JM&pp=ygUMc2hha2UgaXQgb2Zm">Sim</a>
+            </button>
+            <button id="no">Não</button>
+        </div>
+    </div>
+    <script>
+        let button = document.getElementById('no');
+        let height = window.innerHeight - 50;
+        let width = window.innerWidth - 50;
+        button.addEventListener('mouseover', function () {
+            button.style.position = "absolute";
+            button.style.top = Math.random() * height + "px";
+            button.style.left = Math.random() * width + "px";
+        });
+    </script>
+</body>
+</html>
